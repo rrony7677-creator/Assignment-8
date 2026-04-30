@@ -1,5 +1,6 @@
 import { Button, Card } from '@heroui/react';
 import Image from 'next/image';
+import Link from 'next/link';
 import React from 'react';
 import { FaLocationDot } from 'react-icons/fa6';
 
@@ -27,7 +28,9 @@ console.log(animal);
         </div>
         </div>
 
+       <Link href={`/all-animals/${animal.id}`}>
         <Button variant="outline" className={"w-full"}>View Details</Button>
+        </Link>
         </Card>
 
         

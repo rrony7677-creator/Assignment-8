@@ -6,9 +6,15 @@ const nextConfig = {
     remotePatterns: [
       {
       
-        hostname: 'images.unsplash.com',
+        // hostname:"images.unsplash.com",
+        hostname: "i.ibb.co.com"
     
         // pathname: '/account123/**',
+      },
+        {
+      
+        hostname:"images.unsplash.com",
+      
       },
     ],
   }
