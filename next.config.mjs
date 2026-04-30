@@ -2,6 +2,17 @@
 const nextConfig = {
   /* config options here */
   reactCompiler: true,
+ images: {
+    remotePatterns: [
+      {
+      
+        hostname: 'images.unsplash.com',
+    
+        // pathname: '/account123/**',
+      },
+    ],
+  }
+
 };
 
 export default nextConfig;
