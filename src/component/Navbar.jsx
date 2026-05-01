@@ -12,9 +12,9 @@ const userData = authClient.useSession();
 const user = userData.data?.user
 // console.log(user);
 
-// const handleLogout = async()=>{
-// await authClient.signOut();
-// }
+const handleLogout = async()=>{
+await authClient.signOut();
+}
 
   return (
     <div className="border-b px-2">
@@ -50,7 +50,7 @@ const user = userData.data?.user
             </li>
           </ul>}
 
-{/* {
+{
   user && <div className="flex gap-3">
     <Avatar size="sm">
         <Avatar.Image alt="John Doe" 
@@ -62,7 +62,7 @@ const user = userData.data?.user
 <Button onClick={handleLogout} size="sm" variant="danger">Log Out</Button>
 
   </div>
-} */}
+}
 
 
         </div>
