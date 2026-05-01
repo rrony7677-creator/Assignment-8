@@ -9,7 +9,8 @@ console.log(animal);
     return (
         <Card >
         <div>
-            <Image 
+           <div>
+             <Image 
             src={animal.image}
             alt={animal.name}
             height={200}
@@ -18,6 +19,7 @@ console.log(animal);
             // sizes="(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 33vw"
             >
             </Image>
+           </div>
         <div key={animal.id} className="flex justify-between">
         <div className="font-bold text-[20px]">{animal.name}</div>
         <div className="font-bold">  ${animal.price}/=</div>
