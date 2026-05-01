@@ -6,7 +6,7 @@ const FeaturedFour =async () => {
     const res = await fetch('https://assignment-8-six.vercel.app/data.json');
     const animals = await res .json();
     const TopAnimals = animals.slice(0,4)
-    console.log(TopAnimals);
+    // console.log(TopAnimals);
 
     return (
         <div>

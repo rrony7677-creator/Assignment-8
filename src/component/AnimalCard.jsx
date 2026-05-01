@@ -5,7 +5,7 @@ import React from 'react';
 import { FaLocationDot } from 'react-icons/fa6';
 
 const AnimalCard = ({animal}) => {
-console.log(animal);
+// console.log(animal);
     return (
         <Card >
         <div>
