@@ -11,10 +11,12 @@ const AnimalCard = ({animal}) => {
         <div>
            <div>
              <Image 
+             className="rounded-lg"
             src={animal.image}
             alt={animal.name}
             height={200}
             width={200}
+            style={{width:'100%',height:"100%"}}
             // fill
             // sizes="(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 33vw"
             >

@@ -11,12 +11,13 @@ import {
   Label,
   TextField,
 } from "@heroui/react";
-import { useRouter } from "next/router";
+import { useRouter } from "next/navigation";
+// import { useRouter } from "next/router";
 import { FcGoogle } from "react-icons/fc";
 
 export default function RegisterPage() {
 
-// const router = useRouter();
+const router = useRouter();
 
   const onSubmit = async (e) => {
     e.preventDefault();
@@ -27,7 +28,7 @@ export default function RegisterPage() {
     const password = e.target.password.value;
 console.log({name,image,email,password});
 
-const {data,error} = await authClient.register.email({
+const {data,error} = await authClient.signUp.email({
     name,
     image,
     email,
@@ -35,7 +36,8 @@ const {data,error} = await authClient.register.email({
 });
 if(data){
     alert("Registration Success");
-    // router.push('/login')
+
+    router.push('/login')
 };
 if(error){
     alert(error.message || "Register failed ,try again")

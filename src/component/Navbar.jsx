@@ -3,7 +3,7 @@ import { authClient } from "@/lib/auth-client";
 import { Avatar, Button } from "@heroui/react";
 import Image from "next/image";
 import Link from "next/link";
-// import logo from "@/assets/logo.png"
+
 
 const Navbar = () => {
 
@@ -37,6 +37,9 @@ await authClient.signOut();
           </li>
           <li>
             <Link href={"/all-animals"}>All Animals</Link>
+          </li>
+          <li>
+            <Link href={"/profile"}>Profile</Link>
           </li>
         </ul>
 

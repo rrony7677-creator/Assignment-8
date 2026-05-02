@@ -23,7 +23,7 @@ export default function LoginPage() {
     const password = e.target.password.value;
 console.log({email,password});
 
-const {data,error} = await authClient.login.email({
+const {data,error} = await authClient.signIn.email({
     // name,
     // image,
     email,
@@ -33,14 +33,14 @@ const {data,error} = await authClient.login.email({
 
 });
 if(data){
-    alert("Registration Success")
+    alert("login Success")
 };
 if(error){
-    alert(error.message || "Register failed ,try again")
+    alert(error.message || "login failed ,try again")
 }
 
 
-console.log(data,error);
+console.log(error);
   };
 
 

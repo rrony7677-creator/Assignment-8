@@ -3,20 +3,11 @@ const nextConfig = {
   /* config options here */
   reactCompiler: true,
  images: {
-    remotePatterns: [
-      {
-      
-        // protocol:'https',
-        hostname: "i.ibb.co.com",
-        pathname:'/**'
-        
-      },
-      //   {
-      //     protocol:'https',
-      //   hostname:"images.unsplash.com",
-      //      pathname:'/**'
-      // },
-    ],
+  domains: [
+      'api.microlink.io', // Microlink Image Preview
+      'i.ibb.co.com', // Microlink Image Preview
+      'ibb.co.com' // Microlink Image Preview
+    ]
   }
 
 };
