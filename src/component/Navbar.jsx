@@ -3,9 +3,14 @@ import { authClient } from "@/lib/auth-client";
 import { Avatar, Button } from "@heroui/react";
 import Image from "next/image";
 import Link from "next/link";
+import { usePathname } from "next/navigation";
+import { FaHatCowboySide } from "react-icons/fa6";
+
 
 
 const Navbar = () => {
+
+const pathname = usePathname();
 
 const userData = authClient.useSession();
 // console.log(userData); 
@@ -28,18 +33,24 @@ await authClient.signOut();
             height={50}
             className="object-cover h-auto w-auto"
           />
-          <h3 className="font-black text-lg">Animals.</h3>
+          <h3 className="font-black text-xl flex"> 
+            <span className="text-gray-500 items-center">Qurbani</span>
+            <span className="flex items-center"><FaHatCowboySide className="text-purple-400" />Hat</span>
+          </h3>
         </div>
 
-        <ul className="flex items-center gap-5 text-sm">
+        <ul className="flex items-center gap-5 text-sm font-bold">
           <li>
-            <Link href={"/"}>Home</Link>
+            <Link href={"/"}
+            className={pathname==="/"? "bg-green-400 font-bold px-2 py-1 rounded-xl" : ""}>Home</Link>
           </li>
           <li>
-            <Link href={"/all-animals"}>All Animals</Link>
+            <Link href={"/all-animals"}
+            className={pathname==="/all-animals"? "bg-green-400 font-bold px-2 py-1 rounded-xl" : ""}>All Animals</Link>
           </li>
           <li>
-            <Link href={"/profile"}>Profile</Link>
+            <Link href={"/profile"}
+            className={pathname==="/profile"? "bg-green-400 font-bold px-2 py-1 rounded-xl" : ""}>Profile</Link>
           </li>
         </ul>
 

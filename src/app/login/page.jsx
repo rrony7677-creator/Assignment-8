@@ -12,6 +12,7 @@ import {
   TextField,
 } from "@heroui/react";
 import { FcGoogle } from "react-icons/fc";
+import { toast } from "react-toastify";
 
 export default function LoginPage() {
   const onSubmit = async (e) => {
@@ -33,10 +34,10 @@ const {data,error} = await authClient.signIn.email({
 
 });
 if(data){
-    alert("login Success")
+    toast.success("login Success")
 };
 if(error){
-    alert(error.message || "login failed ,try again")
+    toast.error(error.message || "login failed ,try again")
 }
 
 

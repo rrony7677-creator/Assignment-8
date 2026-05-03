@@ -117,7 +117,7 @@ console.log(data,error);
         <div className="flex gap-2 items-center justify-center">
           <Button type="submit">
             <Check />
-            Submit
+            Registration
           </Button>
           <Button type="reset" variant="secondary">
             Reset

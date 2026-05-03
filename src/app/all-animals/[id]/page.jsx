@@ -1,3 +1,6 @@
+
+import { BookNOw } from "@/component/BookNow";
+import { Button, Modal } from "@heroui/react";
 import Image from "next/image";
 
 
@@ -13,7 +16,7 @@ console.log(animal);
     return (
 <div className="max-w-7xl mx-auto mt-12.5 items-center  flex gap-10 justify-between">
    <div>
-     <Image src={animal.image} alt="animal-name" height={500} width={500} >
+     <Image src={animal.image} alt="animal-name" height={500} width={500} className="rounded-lg">
     </Image>
    </div>
    
@@ -25,9 +28,17 @@ console.log(animal);
      <div className="">Price : {animal.price}</div>
      <div>location : {animal.location}</div>
      <div>Description:{animal.description}</div>
+     {/* <Button className="mt-5 bg-linear-to-r from-pink-500 via-purple-500 bg-red-500">Booking Now</Button> */}
+
+    <BookNOw></BookNOw>
     </div>
-    
+
+
+    {/* <Modal></Modal> */}
 </div>
+
+
+
     );
 };
 
