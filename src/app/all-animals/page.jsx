@@ -36,7 +36,7 @@ const AllAnimalPage = () => {
       <div className="flex justify-between items-center mb-5">
         <h1 className="text-2xl font-bold">All Animals</h1>
         
-        {/* সর্টিং ড্রপডাউন বা বাটন */}
+       
         <div className="flex gap-2">
           <button 
     onClick={() => handleSort("lowToHigh")}
